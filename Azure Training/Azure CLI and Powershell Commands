@@ -1,0 +1,41 @@
+                                                        Azure Powershell commands:
+•	Task 1: To create a resource group:
+
+New-AzureRmResourceGroup -Name ShivamTest1 -Location "South Central US"
+
+•	Task 2: To create a VM:
+
+ New-AzureRmVm -ResourceGroupName "ShivamTest1"
+-Name "ShivamVM" 
+-Location "East US" 
+-VirtualNetworkName "myVnet" 
+-SubnetName "mySubnet" 
+-SecurityGroupName "myNetworkSecurityGroup" 
+-PublicIpAddressName "myPublicIpAddress" 
+-OpenPorts 80,3389
+
+•	Task 3: To create a resource group:
+
+New-AzStorageAccount -ResourceGroupName "ShivamTest1" `
+-Name "shivamteststorage1" `
+-Location "East US" `
+-SkuName Standard_LRS `
+-Kind StorageV2
+                                                          Azure CLI commands:
+
+•	Task 1: To create resource group in CLI:
+
+az group create --name ShivamTest2 --location "South Central US"
+
+•	Task 2: To create VM in CLI:
+
+az vm create \
+--resource-group ShivamTest2 \
+--name ShivamVM2 \
+--image win2016datacenter \
+--admin-username ShivamBillus2 \
+--admin-password shivambillus@522
+
+•	Task 3: To create storage account in CLI:
+
+az storage account create -n shivamteststorage2 -g ShivamTest2 -l westus --sku Standard_LRS
