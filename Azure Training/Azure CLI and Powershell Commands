@@ -14,7 +14,7 @@ New-AzureRmResourceGroup -Name ShivamTest1 -Location "South Central US"
 -PublicIpAddressName "myPublicIpAddress" 
 -OpenPorts 80,3389
 
-•	Task 3: To create a resource group:
+•	Task 3: To create a storage account:
 
 New-AzStorageAccount -ResourceGroupName "ShivamTest1" `
 -Name "shivamteststorage1" `
